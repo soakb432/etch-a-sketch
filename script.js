@@ -32,6 +32,8 @@ function clearGrid() {
 createGrid(16);
 container.appendChild(grid);
 
+const buttonSection = document.querySelector(".buttons");
+
 const newGridBtn = document.createElement("button");
 newGridBtn.setAttribute("id", "newGridBtn");
 newGridBtn.textContent = "New Grid";
@@ -47,7 +49,7 @@ newGridBtn.addEventListener("click", () => {
     } 
 })
 
-container.appendChild(newGridBtn);
+buttonSection.appendChild(newGridBtn);
 
 /* <label for="colorpicker">Color Picker:</label> */
 const colorSelect = document.createElement("input");
@@ -59,4 +61,4 @@ colorSelect.addEventListener("input", (e) => {
     squareColor = e.target.value;
 })
 
-container.appendChild(colorSelect);
+buttonSection.appendChild(colorSelect);

@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .grid {
     border: solid 5px #8d8888;
     width: 600px;
