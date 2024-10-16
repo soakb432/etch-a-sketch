@@ -21,3 +21,9 @@
     flex: 1;
     border: solid 1px #8d8888;
 }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
