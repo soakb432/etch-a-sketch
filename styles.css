@@ -1,8 +1,8 @@
 .grid {
-    border: solid 5px blue;
+    border: solid 5px #8d8888;
     width: 600px;
     height: 600px;
-    background-color: black;
+    background-color: #fff;
     display: flex; 
     flex-direction: column;
 }
@@ -14,5 +14,5 @@
 
 .square {
     flex: 1;
-    border: solid 1px red;
+    border: solid 1px #8d8888;
 }
