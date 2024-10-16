@@ -10,7 +10,6 @@
 .row {
     display: flex;
     flex: 1;
-    border: solid 1px red;
 }
 
 .square {
