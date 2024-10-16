@@ -21,3 +21,9 @@ for (let i = 0; i < 16; i++) {
 }
 
 container.appendChild(grid);
+
+const newGrid = document.createElement("button");
+newGrid.setAttribute("class", "newGrid");
+newGrid.textContent = "New Grid";
+
+container.appendChild(newGrid);
