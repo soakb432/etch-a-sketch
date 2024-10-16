@@ -22,8 +22,18 @@ for (let i = 0; i < 16; i++) {
 
 container.appendChild(grid);
 
-const newGrid = document.createElement("button");
-newGrid.setAttribute("class", "newGrid");
-newGrid.textContent = "New Grid";
+const newGridBtn = document.createElement("button");
+newGridBtn.setAttribute("class", "newGridBtn");
+newGridBtn.textContent = "New Grid";
 
-container.appendChild(newGrid);
+newGridBtn.addEventListener("click", () => {
+    let squareNumber = parseInt(prompt("Write the number of squares per side for the new grid (1 - 100): "));
+    
+    if (squareNumber > 100 || squareNumber < 1 || squareNumber === NaN)  {
+        alert("That number is not in the range!");
+    }
+})
+
+container.appendChild(newGridBtn);
+
+
