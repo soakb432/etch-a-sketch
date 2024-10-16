@@ -1,5 +1,8 @@
 const container = document.querySelector(".container")
 
+const grid = document.createElement("div");
+grid.setAttribute("class", "grid");
+
 for (let i = 0; i < 16; i++) {
     const row = document.createElement("div");
     row.setAttribute("class", "row");
@@ -10,5 +13,7 @@ for (let i = 0; i < 16; i++) {
         row.appendChild(square);
     }
 
-    container.appendChild(row);
+    grid.appendChild(row);
 }
+
+container.appendChild(grid);
