@@ -36,11 +36,10 @@ newGridBtn.textContent = "New Grid";
 
 newGridBtn.addEventListener("click", () => {
     let squareNumber = parseInt(prompt("Write the number of squares per side for the new grid (1 - 100): "));
-    console.log("this is what was typed: " + squareNumber);
     
     if (squareNumber > 100 || squareNumber < 1)  {
         alert("That number is not in the range!");
-    } else {
+    } else if (squareNumber) {
         clearGrid();
         createGrid(squareNumber);
     } 
