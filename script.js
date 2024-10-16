@@ -10,8 +10,7 @@ function createGrid(n) {
         
         for (let j = 0; j < n; j++) {
             const square = document.createElement("div");
-            square.setAttribute("class", "square"); 
-            // SET MOUSE EVENT HERE
+            square.setAttribute("class", "square");
             square.addEventListener("mouseenter", () => {
                 square.style.backgroundColor = "red";
             })
@@ -22,8 +21,13 @@ function createGrid(n) {
     }
 }
 
-createGrid(16);
+function clearGrid() {
+    while (grid.lastElementChild) {
+        grid.removeChild(grid.lastElementChild);
+    }
+}
 
+createGrid(16);
 container.appendChild(grid);
 
 const newGridBtn = document.createElement("button");
@@ -32,10 +36,14 @@ newGridBtn.textContent = "New Grid";
 
 newGridBtn.addEventListener("click", () => {
     let squareNumber = parseInt(prompt("Write the number of squares per side for the new grid (1 - 100): "));
+    console.log("this is what was typed: " + squareNumber);
     
-    if (squareNumber > 100 || squareNumber < 1 || squareNumber === NaN)  {
+    if (squareNumber > 100 || squareNumber < 1)  {
         alert("That number is not in the range!");
-    }
+    } else {
+        clearGrid();
+        createGrid(squareNumber);
+    } 
 })
 
 container.appendChild(newGridBtn);
