@@ -4,3 +4,14 @@
     height: 600px;
     background-color: black;
 }
+
+.row {
+    display: flex;
+    flex: 1;
+    border: solid 1px red;
+}
+
+.square {
+    flex: 1;
+    border: solid 1px red;
+}
