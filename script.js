@@ -49,8 +49,6 @@ newGridBtn.addEventListener("click", () => {
     } 
 })
 
-buttonSection.appendChild(newGridBtn);
-
 /* <label for="colorpicker">Color Picker:</label> */
 const colorSelect = document.createElement("input");
 colorSelect.setAttribute("id", "colorSelect")
@@ -62,3 +60,4 @@ colorSelect.addEventListener("input", (e) => {
 })
 
 buttonSection.appendChild(colorSelect);
+buttonSection.appendChild(newGridBtn);
