@@ -27,3 +27,8 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+#newGridBtn, #colorSelect {
+    width: 100px;
+    height: 100px;
+}
