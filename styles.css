@@ -35,10 +35,13 @@
 }
 
 .buttons {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-self: center;
     padding: 50px;
+    height: 580px;
     border: solid black 1px;
 }
 
