@@ -1,3 +1,14 @@
+.header {
+    background-color: red;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 60px;
+    margin-bottom: 40px;
+}
+
 .container {
     display: flex;
     justify-content: space-evenly;
