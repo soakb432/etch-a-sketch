@@ -16,7 +16,11 @@ function createGrid(n) {
             const square = document.createElement("div");
             square.setAttribute("class", "square");
             square.addEventListener("mouseenter", () => {
-                square.style.backgroundColor = squareColor;
+                if (rainbowState) {
+                    square.style.backgroundColor = `rgb(${getRandomInteger(255)}, ${getRandomInteger(255)}, ${getRandomInteger(255)})`;
+                } else {
+                    square.style.backgroundColor = squareColor;
+                }
             })
             row.appendChild(square);
         }
@@ -71,11 +75,11 @@ const rainbowMode = document.createElement("button");
 rainbowMode.setAttribute("class", "button");
 rainbowMode.textContent = "Rainbow Mode"
 
-let rainbowState = false;
-
 function getRandomInteger(max) {
     return Math.floor(Math.random() * (max + 1));
 }
+
+let rainbowState = false;
 
 rainbowMode.addEventListener("click", () => {
     rainbowState = !(rainbowState);
