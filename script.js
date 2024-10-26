@@ -34,7 +34,9 @@ function clearGrid() {
 createGrid(16);
 container.appendChild(grid);
 
-const buttonSection = document.querySelector(".buttons");
+/* NEW GRID BUTTON */
+
+const buttonSection = document.querySelector(".buttonSection");
 
 const newGrid = document.createElement("button");
 newGrid.setAttribute("class", "button");

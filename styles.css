@@ -35,7 +35,7 @@
     border: solid 1px #8d8888;
 }
 
-.buttons {
+.buttonSection {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
