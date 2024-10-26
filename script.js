@@ -64,5 +64,12 @@ colorSelect.addEventListener("input", (e) => {
     squareColor = e.target.value;
 })
 
+/* RAINBOW MODE BUTTON */
+
+const rainbowMode = document.createElement("button");
+rainbowMode.setAttribute("class", "button");
+rainbowMode.textContent = "Rainbow Mode"
+
 buttonSection.appendChild(colorSelect);
 buttonSection.appendChild(newGrid);
+buttonSection.appendChild(rainbowMode);
