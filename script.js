@@ -1,3 +1,5 @@
+/* INITIAL PAGE */
+
 const container = document.querySelector(".container")
 
 const grid = document.createElement("div");
@@ -34,11 +36,11 @@ container.appendChild(grid);
 
 const buttonSection = document.querySelector(".buttons");
 
-const newGridBtn = document.createElement("button");
-newGridBtn.setAttribute("id", "newGridBtn");
-newGridBtn.textContent = "New Grid";
+const newGrid = document.createElement("button");
+newGrid.setAttribute("class", "button");
+newGrid.textContent = "New Grid";
 
-newGridBtn.addEventListener("click", () => {
+newGrid.addEventListener("click", () => {
     let squareNumber = parseInt(prompt("Write the number of squares per side for the new grid (1 - 100): "));
 
     if (squareNumber > 100 || squareNumber < 1)  {
@@ -49,9 +51,10 @@ newGridBtn.addEventListener("click", () => {
     } 
 })
 
-/* <label for="colorpicker">Color Picker:</label> */
+/* COLOR SELECT BUTTON */
+
 const colorSelect = document.createElement("input");
-colorSelect.setAttribute("id", "colorSelect")
+colorSelect.setAttribute("class", "button");
 colorSelect.setAttribute("type", "color");
 colorSelect.setAttribute("value", `${squareColor}`);
 
@@ -60,4 +63,4 @@ colorSelect.addEventListener("input", (e) => {
 })
 
 buttonSection.appendChild(colorSelect);
-buttonSection.appendChild(newGridBtn);
+buttonSection.appendChild(newGrid);
