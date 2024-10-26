@@ -60,8 +60,9 @@ colorSelect.setAttribute("class", "button");
 colorSelect.setAttribute("type", "color");
 colorSelect.setAttribute("value", `${squareColor}`);
 
-colorSelect.addEventListener("input", (e) => {
+colorSelect.addEventListener("change", (e) => {
     squareColor = e.target.value;
+    rainbowState = false;
 })
 
 /* RAINBOW MODE BUTTON */
@@ -69,6 +70,16 @@ colorSelect.addEventListener("input", (e) => {
 const rainbowMode = document.createElement("button");
 rainbowMode.setAttribute("class", "button");
 rainbowMode.textContent = "Rainbow Mode"
+
+let rainbowState = false;
+
+function getRandomInteger(max) {
+    return Math.floor(Math.random() * (max + 1));
+}
+
+rainbowMode.addEventListener("click", () => {
+    rainbowState = !(rainbowState);
+})
 
 buttonSection.appendChild(colorSelect);
 buttonSection.appendChild(newGrid);
