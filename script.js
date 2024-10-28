@@ -73,7 +73,7 @@ colorSelect.addEventListener("change", (e) => {
 
 const rainbowMode = document.createElement("button");
 rainbowMode.setAttribute("class", "button");
-rainbowMode.textContent = "Rainbow Mode"
+rainbowMode.textContent = "Rainbow Mode";
 
 function getRandomInteger(max) {
     return Math.floor(Math.random() * (max + 1));
@@ -85,6 +85,13 @@ rainbowMode.addEventListener("click", () => {
     rainbowState = !(rainbowState);
 })
 
+/* DARKEN MODE BUTTON */
+
+const darkenMode = document.createElement("button");
+darkenMode.setAttribute("class", "button");
+darkenMode.textContent = "Darken Mode";
+
 buttonSection.appendChild(colorSelect);
 buttonSection.appendChild(newGrid);
 buttonSection.appendChild(rainbowMode);
+buttonSection.appendChild(darkenMode);
