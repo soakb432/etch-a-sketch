@@ -91,6 +91,13 @@ const darkenMode = document.createElement("button");
 darkenMode.setAttribute("class", "button");
 darkenMode.textContent = "Darken Mode";
 
+let darkenState = false;
+
+darkenMode.addEventListener("click", () => {
+    darkenState = !(darkenState);
+    console.log(darkenState);
+})
+
 buttonSection.appendChild(colorSelect);
 buttonSection.appendChild(newGrid);
 buttonSection.appendChild(rainbowMode);
