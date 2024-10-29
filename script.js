@@ -45,9 +45,7 @@ function colorGrid() {
 }
 
 function clearGrid() {
-    while (grid.lastElementChild) {
-        grid.removeChild(grid.lastElementChild);
-    }
+    grid.textContent = "";
 }
 
 createGrid(16);
