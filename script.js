@@ -25,7 +25,16 @@ function createGrid(n) {
 function colorGrid() {
     const squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
+        let squareOpacity = 0;
         square.addEventListener("mouseenter", () => {
+            if (darkenState) {
+                if (squareOpacity < 1) {
+                    squareOpacity += 0.1;
+                }
+                square.style.opacity = squareOpacity;
+            } else {
+                square.style.opacity = 1;
+            }
             if (rainbowState) {
                 square.style.backgroundColor = `rgb(${getRandomInteger(255)}, ${getRandomInteger(255)}, ${getRandomInteger(255)})`;
             } else {
@@ -74,6 +83,7 @@ colorSelect.setAttribute("value", `${squareColor}`);
 colorSelect.addEventListener("change", (e) => {
     squareColor = e.target.value;
     rainbowState = false;
+    darkenState = false;
 })
 
 /* RAINBOW MODE BUTTON */
