@@ -15,18 +15,24 @@ function createGrid(n) {
         for (let j = 0; j < n; j++) {
             const square = document.createElement("div");
             square.setAttribute("class", "square");
-            square.addEventListener("mouseenter", () => {
-                if (rainbowState) {
-                    square.style.backgroundColor = `rgb(${getRandomInteger(255)}, ${getRandomInteger(255)}, ${getRandomInteger(255)})`;
-                } else {
-                    square.style.backgroundColor = squareColor;
-                }
-            })
             row.appendChild(square);
         }
-    
+
         grid.appendChild(row);
-    }
+    }   container.appendChild(grid);
+} 
+
+function colorGrid() {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((square) => {
+        square.addEventListener("mouseenter", () => {
+            if (rainbowState) {
+                square.style.backgroundColor = `rgb(${getRandomInteger(255)}, ${getRandomInteger(255)}, ${getRandomInteger(255)})`;
+            } else {
+                square.style.backgroundColor = squareColor;
+            }
+        })
+    })
 }
 
 function clearGrid() {
@@ -36,7 +42,7 @@ function clearGrid() {
 }
 
 createGrid(16);
-container.appendChild(grid);
+colorGrid();
 
 /* NEW GRID BUTTON */
 
@@ -54,6 +60,7 @@ newGrid.addEventListener("click", () => {
     } else if (squareNumber) {
         clearGrid();
         createGrid(squareNumber);
+        colorGrid();
     } 
 })
 
@@ -95,7 +102,6 @@ let darkenState = false;
 
 darkenMode.addEventListener("click", () => {
     darkenState = !(darkenState);
-    console.log(darkenState);
 })
 
 buttonSection.appendChild(colorSelect);
