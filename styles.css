@@ -62,6 +62,11 @@ body {
     border: 0px;
 }
 
+.button:hover {
+    background-color: #778DA9;
+    color: #1B263B;
+}
+
 .footer {
     position: fixed;
     left: 0;
