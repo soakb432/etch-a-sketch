@@ -5,7 +5,7 @@ const container = document.querySelector(".container")
 const grid = document.createElement("div");
 grid.setAttribute("class", "grid");
 
-let squareColor = "#8d8888";
+let squareColor = "#778DA9";
 
 function createGrid(n) {
     for (let i = 0; i < n; i++) {
