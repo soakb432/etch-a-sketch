@@ -59,12 +59,30 @@ body {
     width: 100px;
     height: 100px;
     background-color: #415A77;
-    border: 0px;
+    border: none;
 }
 
 .button:hover {
     background-color: #778DA9;
     color: #1B263B;
+}
+
+#colorSelect {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    align-self: center;
+}
+
+input[type=color]::-webkit-color-swatch,
+input[type=color]::-webkit-color-swatch-wrapper {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
 }
 
 .footer {

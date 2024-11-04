@@ -74,7 +74,7 @@ newGrid.addEventListener("click", () => {
 /* COLOR SELECT BUTTON */
 
 const colorSelect = document.createElement("input");
-colorSelect.setAttribute("class", "button");
+colorSelect.setAttribute("id", "colorSelect");
 colorSelect.setAttribute("type", "color");
 colorSelect.setAttribute("value", `${squareColor}`);
 
