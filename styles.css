@@ -62,7 +62,7 @@ body {
     border: none;
 }
 
-.button:hover {
+.button:hover, .button.active {
     background-color: #778DA9;
     color: #1B263B;
 }

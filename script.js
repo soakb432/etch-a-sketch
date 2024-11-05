@@ -80,8 +80,12 @@ colorSelect.setAttribute("value", `${squareColor}`);
 
 colorSelect.addEventListener("change", (e) => {
     squareColor = e.target.value;
+
     rainbowState = false;
+    rainbowMode.classList.remove("active");
+
     darkenState = false;
+    darkenMode.classList.remove("active");
 })
 
 /* RAINBOW MODE BUTTON */
@@ -98,6 +102,7 @@ let rainbowState = false;
 
 rainbowMode.addEventListener("click", () => {
     rainbowState = !(rainbowState);
+    rainbowMode.classList.toggle("active");
 })
 
 /* DARKEN MODE BUTTON */
@@ -110,6 +115,7 @@ let darkenState = false;
 
 darkenMode.addEventListener("click", () => {
     darkenState = !(darkenState);
+    darkenMode.classList.toggle("active");
 })
 
 buttonSection.appendChild(colorSelect);
