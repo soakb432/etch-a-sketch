@@ -102,3 +102,7 @@ input[type=color]::-webkit-color-swatch-wrapper {
 .header, .footer, .button {
     color: #E0E1DD;
 }
+
+.grid, .buttonSection, .button {
+    border-radius: 5px;
+}
