@@ -5,6 +5,12 @@ const container = document.querySelector(".container")
 const grid = document.createElement("div");
 grid.setAttribute("class", "grid");
 
+const DEFAULT_COLOR = "#778DA9";
+const DEFAULT_SIZE = 16;
+
+let squareColor = DEFAULT_COLOR;
+let currentSize = DEFAULT_SIZE;
+
 function createGrid(n) {
     for (let i = 0; i < n; i++) {
         const row = document.createElement("div");
