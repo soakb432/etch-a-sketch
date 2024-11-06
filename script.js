@@ -5,8 +5,6 @@ const container = document.querySelector(".container")
 const grid = document.createElement("div");
 grid.setAttribute("class", "grid");
 
-let squareColor = "#778DA9";
-
 function createGrid(n) {
     for (let i = 0; i < n; i++) {
         const row = document.createElement("div");
@@ -44,11 +42,11 @@ function colorGrid() {
     })
 }
 
-function clearGrid() {
+function deleteGrid() {
     grid.textContent = "";
 }
 
-createGrid(16);
+createGrid(currentSize);
 colorGrid();
 
 /* NEW GRID BUTTON */
@@ -65,11 +63,19 @@ newGrid.addEventListener("click", () => {
     if (squareNumber > 100 || squareNumber < 1)  {
         alert("That number is not in the range!");
     } else if (squareNumber) {
-        clearGrid();
+        deleteGrid();
         createGrid(squareNumber);
         colorGrid();
     } 
 })
+
+/* CLEAR GRID BUTTON */
+
+const clearGrid = document.createElement("button");
+clearGrid.setAttribute("class", "button");
+clearGrid.textContent = "Clear Grid";
+
+const squares = document.querySelectorAll(".square")
 
 /* COLOR SELECT BUTTON */
 
@@ -120,5 +126,10 @@ darkenMode.addEventListener("click", () => {
 
 buttonSection.appendChild(colorSelect);
 buttonSection.appendChild(newGrid);
+buttonSection.appendChild(clearGrid);
 buttonSection.appendChild(rainbowMode);
 buttonSection.appendChild(darkenMode);
+
+// TODO: COLOR MODE button (store the current color from COLOR SELECTOR)
+// TODO: "CLEAR" (as in erase all colors from grid, NOT delete the grid) GRID button
+// TODO: color grid ONLY when mouse is held down
