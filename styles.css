@@ -61,28 +61,19 @@ body {
     gap: 16px;
 }
 
-.button {
+button {
     width: 100px;
     height: 50px;
     background-color: #415A77;
     border: none;
 }
 
-.button.active {
+button.active {
     background-color: #778DA9;
     color: #1B263B;
 }
 
-.button:hover, #colorSelect:hover {
-    transform: scale(1.05);
-}
-
-.button,
 input[type='color'] {
-  transition: transform 0.1s ease-in-out;
-}
-
-#colorSelect {
     width: 80px;
     height: 80px;
     border: none;
@@ -100,6 +91,14 @@ input[type='color']::-webkit-color-swatch-wrapper {
     padding: 0;
 }
 
+button:hover, input[type='color']:hover {
+    transform: scale(1.05);
+}
+
+button, input[type='color'] {
+    transition: transform 0.1s ease-in-out;
+}
+
 .footer { /* FIXME: Make footer stick at bottom of page with Odin Project method (YOU DID IT BEFORE!!!!) */
     position: fixed;
     left: 0;
@@ -108,10 +107,10 @@ input[type='color']::-webkit-color-swatch-wrapper {
     text-align: center;
 }
 
-.header, .footer, .button {
+.header, .footer, button {
     color: #E0E1DD;
 }
 
-.grid, .buttonSection, .button {
+.grid, .buttonSection, button {
     border-radius: 5px;
 }

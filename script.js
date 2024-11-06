@@ -61,7 +61,6 @@ colorGrid();
 const buttonSection = document.querySelector(".buttonSection");
 
 const newGrid = document.createElement("button");
-newGrid.setAttribute("class", "button");
 newGrid.textContent = "New Grid";
 
 newGrid.addEventListener("click", () => {
@@ -79,7 +78,6 @@ newGrid.addEventListener("click", () => {
 /* CLEAR GRID BUTTON */
 
 const clearGrid = document.createElement("button");
-clearGrid.setAttribute("class", "button");
 clearGrid.textContent = "Clear Grid";
 
 const squares = document.querySelectorAll(".square")
@@ -93,7 +91,6 @@ clearGrid.addEventListener("click", () => {
 /* COLOR SELECT BUTTON */
 
 const colorSelect = document.createElement("input");
-colorSelect.setAttribute("id", "colorSelect");
 colorSelect.setAttribute("type", "color");
 colorSelect.setAttribute("value", `${squareColor}`);
 
@@ -110,7 +107,6 @@ colorSelect.addEventListener("change", (e) => {
 /* RAINBOW MODE BUTTON */
 
 const rainbowMode = document.createElement("button");
-rainbowMode.setAttribute("class", "button");
 rainbowMode.textContent = "Rainbow Mode";
 
 function getRandomInteger(max) {
@@ -127,7 +123,6 @@ rainbowMode.addEventListener("click", () => {
 /* DARKEN MODE BUTTON */
 
 const darkenMode = document.createElement("button");
-darkenMode.setAttribute("class", "button");
 darkenMode.textContent = "Darken Mode";
 
 let darkenState = false;
@@ -144,5 +139,4 @@ buttonSection.appendChild(rainbowMode);
 buttonSection.appendChild(darkenMode);
 
 // TODO: COLOR MODE button (store the current color from COLOR SELECTOR)
-// TODO: "CLEAR" (as in erase all colors from grid, NOT delete the grid) GRID button
 // TODO: color grid ONLY when mouse is held down
