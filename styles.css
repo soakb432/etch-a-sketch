@@ -68,9 +68,18 @@ body {
     border: none;
 }
 
-.button:hover, .button.active { /*FIXME: MAKE different style when mode buttons are active */
+.button.active {
     background-color: #778DA9;
     color: #1B263B;
+}
+
+.button:hover, #colorSelect:hover {
+    transform: scale(1.05);
+}
+
+.button,
+input[type='color'] {
+  transition: transform 0.1s ease-in-out;
 }
 
 #colorSelect {
@@ -82,8 +91,8 @@ body {
     align-self: center;
 }
 
-input[type=color]::-webkit-color-swatch,
-input[type=color]::-webkit-color-swatch-wrapper {
+input[type='color']::-webkit-color-swatch,
+input[type='color']::-webkit-color-swatch-wrapper {
     width: 80px;
     height: 80px;
     border: none;
