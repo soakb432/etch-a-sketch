@@ -12,6 +12,7 @@ let squareColor = DEFAULT_COLOR;
 let currentSize = DEFAULT_SIZE;
 
 function createGrid(n) {
+    currentSize = n;
     for (let i = 0; i < n; i++) {
         const row = document.createElement("div");
         row.setAttribute("class", "row");
@@ -82,6 +83,12 @@ clearGrid.setAttribute("class", "button");
 clearGrid.textContent = "Clear Grid";
 
 const squares = document.querySelectorAll(".square")
+
+clearGrid.addEventListener("click", () => {
+    deleteGrid();
+    createGrid(currentSize);
+    colorGrid();
+})
 
 /* COLOR SELECT BUTTON */
 
