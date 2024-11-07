@@ -91,11 +91,11 @@ input[type='color']::-webkit-color-swatch-wrapper {
     padding: 0;
 }
 
-button:hover, input[type='color']:hover {
+button:hover, input[type='color']:hover, img:hover {
     transform: scale(1.05);
 }
 
-button, input[type='color'] {
+button, input[type='color'], img {
     transition: transform 0.1s ease-in-out;
 }
 
@@ -113,4 +113,9 @@ button, input[type='color'] {
 
 .grid, .buttonSection, button {
     border-radius: 5px;
+}
+
+img {
+    height: 1.5em;
+    width: auto;
 }
