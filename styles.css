@@ -103,17 +103,24 @@ button, input[type='color'], img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    background-color: #778DA9;
+    color: #1B263B;
+    padding: 4vh;
+    min-width: 200px;
+    min-height: auto;
+    align-self: center;
+    font-size: 2vw;
+    margin: 6vh;
+    }
 
 .header, button {
     color: #E0E1DD;
 }
 
-.grid, .buttonSection, button {
+.grid, .buttonSection, button, .footer {
     border-radius: 5px;
 }
 
 img {
-    height: 1em;
-    width: auto;
+    width: 1em;
 }
