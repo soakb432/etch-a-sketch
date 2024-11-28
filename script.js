@@ -61,7 +61,7 @@ colorGrid();
 const buttonSection = document.querySelector(".buttonSection");
 
 const newGrid = document.createElement("button");
-newGrid.textContent = "New Grid";
+newGrid.textContent = "New";
 
 newGrid.addEventListener("click", () => {
     let squareNumber = parseInt(prompt("Write the number of squares per side for the new grid (1 - 100): "));
@@ -78,7 +78,7 @@ newGrid.addEventListener("click", () => {
 /* CLEAR GRID BUTTON */
 
 const clearGrid = document.createElement("button");
-clearGrid.textContent = "Clear Grid";
+clearGrid.textContent = "Clear";
 
 const squares = document.querySelectorAll(".square")
 
@@ -107,7 +107,7 @@ colorSelect.addEventListener("change", (e) => {
 /* RAINBOW MODE BUTTON */
 
 const rainbowMode = document.createElement("button");
-rainbowMode.textContent = "Rainbow Mode";
+rainbowMode.textContent = "Rainbow";
 
 function getRandomInteger(max) {
     return Math.floor(Math.random() * (max + 1));
@@ -123,7 +123,7 @@ rainbowMode.addEventListener("click", () => {
 /* DARKEN MODE BUTTON */
 
 const darkenMode = document.createElement("button");
-darkenMode.textContent = "Darken Mode";
+darkenMode.textContent = "Darken";
 
 let darkenState = false;
 
