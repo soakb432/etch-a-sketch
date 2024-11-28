@@ -105,8 +105,7 @@ button, input[type='color'], img {
     align-items: center;
     background-color: #778DA9;
     color: #1B263B;
-    padding: 4vh;
-    min-width: 200px;
+    padding: 2vh;
     min-height: auto;
     align-self: center;
     font-size: 2vw;
@@ -122,5 +121,7 @@ button, input[type='color'], img {
 }
 
 img {
-    width: 1em;
+    width: 5vw;
+    display: block;
+    margin: 0 auto;
 }
