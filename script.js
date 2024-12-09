@@ -31,19 +31,21 @@ function colorGrid() {
     const squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
         let squareOpacity = 0;
-        square.addEventListener("mouseenter", () => {
-            if (darkenState) {
-                if (squareOpacity < 1) {
-                    squareOpacity += 0.1;
+        square.addEventListener("mouseenter", (e) => {
+            if (e.buttons === 1) {
+                if (darkenState) {
+                    if (squareOpacity < 1) {
+                        squareOpacity += 0.1;
+                    }
+                    square.style.opacity = squareOpacity;
+                } else {
+                    square.style.opacity = 1;
                 }
-                square.style.opacity = squareOpacity;
-            } else {
-                square.style.opacity = 1;
-            }
-            if (rainbowState) {
-                square.style.backgroundColor = `rgb(${getRandomInteger(255)}, ${getRandomInteger(255)}, ${getRandomInteger(255)})`;
-            } else {
-                square.style.backgroundColor = squareColor;
+                if (rainbowState) {
+                    square.style.backgroundColor = `rgb(${getRandomInteger(255)}, ${getRandomInteger(255)}, ${getRandomInteger(255)})`;
+                } else {
+                    square.style.backgroundColor = squareColor;
+                }
             }
         })
     })
