@@ -51,6 +51,12 @@ function colorGrid() {
     })
 }
 
+document.addEventListener("mousedown", (e) => {
+    if (e.buttons === 1) {
+        e.preventDefault();
+    }
+});
+
 function deleteGrid() {
     grid.textContent = "";
 }
